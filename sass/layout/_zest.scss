@@ -1,54 +1,92 @@
 .zest {
-    @extend .section;
+  @extend .section;
 }
-.zest__contaainer {
-    @extend .container;
-    display: block;
-    text-align: center;
-    margin: 0 auto;
+.zest__container {
+  @extend .container;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
 }
 .zest__title {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    border: 0;
-    clip: rect(0 0 0 0);
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
 }
+
 .zest-list {
-    @extend .list;
+  @extend .list;
+}
+
+@media screen and (min-width: 768px) {
+  .zest-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .zest-list {
     display: flex;
     margin-right: -30px;
+  }
 }
-.zest-list__item {
+.zest-list__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .zest-list__item {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .zest-list__item {
     flex-basis: calc(100% / 4 - 30px);
     margin-right: 30px;
-    
-}
-.zest-list__icon {
-    display: flex;
-    height: 120px;
-    background-color: var(--background-section);
-    align-items: center;
-    justify-content: center;
     margin-bottom: 30px;
+  }
+}
+
+// .zest-list {
+//   @extend .list;
+//   display: flex;
+//   margin-right: -30px;
+// }
+
+.zest-list__icon {
+  display: flex;
+  width: auto;
+  height: 120px;
+  background-color: var(--background-section);
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
 .zest__subtitle {
+  text-align: center;
+  @include font(14px, 700, 1.14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .zest__subtitle {
     text-align: left;
-    @include font(14px, 700, 1.14);
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    margin-bottom: 10px;;
+  }
 }
 
 .zest__text {
-    text-align: left;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    color: var(--primary-text-color);
-    padding: 0;
+  text-align: left;
+  @include font(14px, 400, 1.71);
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  padding: 0;
 }
