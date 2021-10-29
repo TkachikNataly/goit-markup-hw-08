@@ -1,0 +1,168 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  min-height: 581px;
+  width: 528px;
+  padding: 40px;
+  background-color: var(--lite-text-color);
+  border-radius: 4px;
+  box-shadow: 1px 0px 2px rgba(0, 0, 0, 0.2), 1px 0px 1px rgba(0, 0, 0, 0.14),
+    3px 0px 1px rgba(0, 0, 0, 0.12);
+  @include transition(
+    transform,
+    null,
+    null,
+    250ms,
+    cubic-bezier(0.4, 0, 0.2, 1)
+  );
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close-button {
+  @extend .bt;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--border-modal-button);
+  background-color: var(--lite-text-color);
+  color: var(--logo-color);
+  @include transition(
+    background-color,
+    fill,
+    null,
+    250ms,
+    cubic-bezier(0.4, 0, 0.2, 1)
+  );
+}
+.close-button:hover,
+.close-button:focus {
+  fill: var(--accent-color);
+}
+.modal__title {
+  display: inline-block;
+  @include font(20px, 700, 1.15);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-secondary-color);
+  margin-bottom: 12px;
+  @include transition(fill, null, null, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
+}
+.close-button .svg-modal:hover {
+  fill: var(--accent-color);
+}
+.modal__form {
+  margin-bottom: 10px;
+}
+.modal__label {
+  display: inline-block;
+  @include font(12px, 400, 1.17);
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+  margin-bottom: 4px;
+}
+.form-modal-spam {
+  display: block;
+  position: relative;
+}
+.form-modal-spam__input {
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid var(--border-modal-form);
+  padding-left: 42px;
+  padding-right: 20px;
+  outline: none;
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-icon {
+  display: block;
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-modal-spam__input:focus {
+  border: 1px solid var(--accent-color);
+}
+.form-modal-spam__input:focus + .form-icon {
+  fill: var(--accent-color);
+}
+.modal__comment {
+  @extend .modal__form;
+  margin-bottom: 20px;
+}
+.modal__text {
+  @include font(12px, 400, 1.17);
+  letter-spacing: 0.01em;
+  color: var(--comments-text);
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  outline: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: 1px solid var(--border-modal-form);
+  resize: none;
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal__text:focus {
+  border: 1px solid var(--accent-color);
+}
+.modal-checkbox {
+  @extend .visually-hidden;
+}
+.modal-checkbox__label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.modal-checkbox__label span {
+  width: 15px;
+  height: 15px;
+  border: 2px solid var(--title-secondary-color);
+  border-radius: 3px;
+  margin-right: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-checkbox:checked + .modal-checkbox__label span {
+  background-color: var(--accent-color);
+  border: none;
+}
+.modal-checkbox:focus + .modal-checkbox__label .modal-checkbox__link,
+.modal-checkbox:hover + .modal-checkbox__label .modal-checkbox__link {
+  border: 2px solid var(--accent-color);
+}
+.modal-checkbox__link {
+  cursor: pointer;
+}
+.check-link {
+  color: var(--accent-color);
+}

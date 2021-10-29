@@ -1,0 +1,125 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: var(--section-color);
+}
+.footer__container {
+    @extend .container;
+    display: flex;
+    align-items: baseline;
+}
+.footer-contakt__address {
+    margin-top: 20px;
+}
+.footer-list {
+    @extend .list;
+}
+.footer-link-adress {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--lite-text-color);
+}
+
+.footer-link {
+    @extend .link;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-logo {
+    @extend .link;
+    width: 145px;
+    font-family: "Raleway", sans-serif;
+    @include font(26px, 700, 1.19);
+    letter-spacing: 0.03em;
+    color: var(--lite-text-color);
+}
+.footer-list__item:not(:last-child) {
+    margin-bottom: 9px;
+}
+.footer-soc {
+    text-align: left;
+}
+.footer-soc__icon {
+    margin-left: 70px;
+}
+.footer-strong {
+    display: block;
+    @include font(14px, 700, 1.14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--lite-text-color); 
+    margin-bottom: 20px;
+}
+.footer-soclist {
+    @extend .list;
+    display: flex;
+}
+.footer-soclist__item {
+    margin-right: 10px;
+    width: 44px;
+    height: 44px;
+}
+.footer-soclist__item:last-child {
+    margin-right: 0;
+}
+.footer-soclist__link {
+    @extend .link;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    color: var(--lite-text-color);
+    background-color: rgba(255, 255, 255, 0.1); ;
+    align-items: center;
+    justify-content: center;
+    transition-property: bacground-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-soclist__link:focus,
+.footer-soclist__link:hover {
+    background-color: var(--accent-color);
+    color: var(--lite-text-color);
+}
+.footer-subscribe__container {
+    margin-left: auto;
+    
+}
+.subscribe-email {
+    display: flex;
+    justify-content: left;
+}
+.subscribe-input {
+   width: 358px;
+   height: 50px;
+   background-color: transparent;
+   outline: none;
+   border: 1px solid var(--footer-border);
+   border-radius: 4px;
+   padding: 15px 0;
+   padding-left: 16px;
+   color: var(--subscribe-text);
+   filter: drop-shadow(4px 0px 4px rgba(0, 0, 0, 0.15));
+   transition-property: border;
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.subscribe-input:focus {
+    border: 1px solid var(--accent-color);
+}
+.main-button__subscribe {
+    margin-left: 12px;
+    padding: 10px 28px;
+}
+.main-button__svg {
+    display: flex;
+    margin-left: 10px;
+    fill: currentColor;
+}
