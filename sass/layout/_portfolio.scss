@@ -26,6 +26,7 @@
 }
 .portfolio-group__item:not(:last-child) {
   margin-right: 8px;
+  margin-bottom: 15px;
 }
 .portfolio-bt {
   @extend .bt;
@@ -62,7 +63,6 @@
 }
 @media screen and (min-width: 768px) {
   .portfolio-list {
-    @extend .list;
     display: flex;
     flex-wrap: wrap;
     margin-right: -30px;
@@ -118,6 +118,7 @@
 
 .signature {
   padding: 20px 24px;
+  flex-grow: 1;
   border-right: 1px solid var(--border-color);
   border-left: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
@@ -126,6 +127,7 @@
 .portfolio-title-two {
   @include font(18px, 700, 2);
   text-align: left;
+  letter-spacing: 0.06em;
   margin-bottom: 4px;
   color: var(--title-secondary-color);
 }
