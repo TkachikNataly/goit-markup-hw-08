@@ -281,7 +281,7 @@ input:-webkit-autofill:active {
 
 @media screen and (min-width: 480px) {
   .header-container {
-    max-width: 480px;
+    width: 480px;
   }
 }
 
@@ -489,7 +489,6 @@ input:-webkit-autofill:active {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
   width: 100vw;
   height: 100vh;
   padding: 48px, 40px;
@@ -571,12 +570,29 @@ input:-webkit-autofill:active {
   color: var(--primary-text-color);
 }
 
-.phonem {
+.phone {
   font-size: 34px;
   font-weight: 500;
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--accent-color);
+}
+
+@media screen and (min-width: 768px) {
+  .phone {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.17;
+    color: var(--primary-text-color);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .phone {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14;
+  }
 }
 
 .menu-soc {
