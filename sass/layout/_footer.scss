@@ -27,6 +27,11 @@
     padding-right: 80px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .footer-adaptiv {
+    align-items: baseline;
+  }
+}
 .footer-contakt {
   margin-bottom: 60px;
 }

@@ -251,6 +251,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 2;
   width: 100vw;
   height: 100vh;
   padding: 48px, 40px;
@@ -326,7 +327,7 @@
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
 }
-.phone {
+.phonem {
   @include font(34px, 500, 1.17);
   letter-spacing: 0.02em;
   color: var(--accent-color);
