@@ -186,6 +186,14 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (min-width: 768px) {
+  .top {
+    padding-top: 21px;
+  }
+  .phone {
+    padding-bottom: 21px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .header-contakt__link {
     padding-top: 32px;
@@ -251,7 +259,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 999;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -288,9 +296,7 @@
 }
 .menu-list {
   @extend .list;
-  // padding-left: 40px;
-  // padding-top: 48px;
-  // padding-bottom: 302px;
+  margin-bottom: 32px;
 }
 .menu-list__item:not(:last-child) {
   margin-bottom: 32px;

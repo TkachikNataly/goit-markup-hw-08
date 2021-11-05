@@ -127,7 +127,7 @@ input:-webkit-autofill:active {
 
 @media screen and (min-width: 480px) {
   .container, .header-container, .heroy-container, .zest__container, .about__container, .team__container, .cutomers__container, .portfolio__container, .footer__container {
-    width: 100%;
+    width: 480px;
   }
 }
 
@@ -188,6 +188,7 @@ input:-webkit-autofill:active {
   align-items: center;
   text-align: center;
   height: 400px;
+  width: 480px;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -200,6 +201,13 @@ input:-webkit-autofill:active {
 @media (min-resolution: 2dppx) {
   .overlay, .heroy {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/header-backgroundmob-x2.jpg);
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .overlay, .heroy {
+    min-height: 400px;
+    width: 100%;
   }
 }
 
@@ -217,6 +225,9 @@ input:-webkit-autofill:active {
 
 @media (min-width: 1200px) {
   .overlay, .heroy {
+    width: 100%;
+    max-width: 1600px;
+    height: 600px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/header-background.jpg);
   }
 }
@@ -433,6 +444,15 @@ input:-webkit-autofill:active {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (min-width: 768px) {
+  .top {
+    padding-top: 21px;
+  }
+  .phone {
+    padding-bottom: 21px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .header-contakt__link {
     padding-top: 32px;
@@ -489,7 +509,7 @@ input:-webkit-autofill:active {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 999;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -526,6 +546,10 @@ input:-webkit-autofill:active {
 .menu-container__close:focus,
 .menu-container__close:hover {
   color: var(--accent-color);
+}
+
+.menu-list {
+  margin-bottom: 32px;
 }
 
 .menu-list__item:not(:last-child) {
@@ -627,8 +651,16 @@ input:-webkit-autofill:active {
 }
 
 .heroy {
+  display: block;
   background-color: var(--section-color);
   padding: 118px 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .heroy {
+    height: 600px;
+    padding: 200px 0;
+  }
 }
 
 .heroy-container {
@@ -648,6 +680,15 @@ input:-webkit-autofill:active {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--lite-text-color);
+}
+
+@media (max-width: 479px) {
+  .heroy__title {
+    max-width: 696px;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1.36;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -1030,13 +1071,33 @@ input:-webkit-autofill:active {
   margin-bottom: 15px;
 }
 
+@media screen and (min-width: 1200px) {
+  .portfolio-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 .portfolio-group__list {
   margin-bottom: 40px;
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-group__list {
+    margin-bottom: 50px;
+  }
 }
 
 .portfolio-group__item:not(:last-child) {
   margin-right: 8px;
   margin-bottom: 15px;
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-group__item:not(:last-child) {
+    margin-bottom: 0;
+  }
 }
 
 .portfolio-bt {
@@ -1104,6 +1165,10 @@ input:-webkit-autofill:active {
 }
 
 .portfolio-list__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1149,11 +1214,11 @@ input:-webkit-autofill:active {
 }
 
 .portfolio-overlay-text {
-  display: flex;
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1192,12 +1257,14 @@ input:-webkit-autofill:active {
   .footer__container {
     display: flex;
     justify-content: center;
+    text-align: left;
     align-items: baseline;
   }
 }
 
 .footer-adaptiv {
   display: block;
+  margin-bottom: 60px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1212,6 +1279,8 @@ input:-webkit-autofill:active {
 
 @media screen and (min-width: 1200px) {
   .footer-adaptiv {
+    padding: 0;
+    margin: 0;
     align-items: baseline;
   }
 }
@@ -1220,7 +1289,7 @@ input:-webkit-autofill:active {
   margin-bottom: 60px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .footer-contakt {
     margin-bottom: 0;
   }
@@ -1277,12 +1346,12 @@ input:-webkit-autofill:active {
 
 .footer-soc {
   text-align: center;
-  margin-bottom: 60px;
 }
 
 @media screen and (min-width: 1200px) {
   .footer-soc {
     margin-bottom: 0;
+    text-align: left;
   }
 }
 
@@ -1354,6 +1423,7 @@ input:-webkit-autofill:active {
 @media screen and (min-width: 1200px) {
   .footer-subscribe {
     padding: 0;
+    margin: 0;
   }
 }
 
@@ -1426,8 +1496,8 @@ input:-webkit-autofill:active {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  height: 609px;
-  width: 450px;
+  width: 96%;
+  height: auto;
   padding: 40px;
   background-color: var(--lite-text-color);
   border-radius: 4px;
@@ -1438,6 +1508,13 @@ input:-webkit-autofill:active {
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    height: 609px;
+    width: 450px;
+  }
 }
 
 @media screen and (min-width: 1200px) {

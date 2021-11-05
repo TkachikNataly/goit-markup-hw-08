@@ -1,7 +1,14 @@
 .heroy {
   @extend .overlay;
+  display: block;
   background-color: var(--section-color);
   padding: 118px 0;
+}
+@media screen and (min-width: 1200px) {
+  .heroy {
+    height: 600px;
+    padding: 200px 0;
+  }
 }
 .heroy-container {
   @extend .container;
@@ -18,6 +25,12 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--lite-text-color);
+}
+@media (max-width: 479px) {
+  .heroy__title {
+    max-width: 696px;
+    @include font(20px, 900, 1.36);
+  }
 }
 @media (min-width: 1200px) {
   .heroy__title {

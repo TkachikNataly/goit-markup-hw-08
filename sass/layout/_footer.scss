@@ -12,11 +12,13 @@
   .footer__container {
     display: flex;
     justify-content: center;
+    text-align: left;
     align-items: baseline;
   }
 }
 .footer-adaptiv {
   display: block;
+  margin-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
   .footer-adaptiv {
@@ -29,13 +31,15 @@
 }
 @media screen and (min-width: 1200px) {
   .footer-adaptiv {
+    padding: 0;
+    margin: 0;
     align-items: baseline;
   }
 }
 .footer-contakt {
   margin-bottom: 60px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .footer-contakt {
     margin-bottom: 0;
   }
@@ -95,11 +99,11 @@
 }
 .footer-soc {
   text-align: center;
-  margin-bottom: 60px;
 }
 @media screen and (min-width: 1200px) {
   .footer-soc {
     margin-bottom: 0;
+    text-align: left;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -162,6 +166,7 @@
 @media screen and (min-width: 1200px) {
   .footer-subscribe {
     padding: 0;
+    margin: 0;
   }
 }
 @media screen and (min-width: 1200px) {
