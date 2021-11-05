@@ -1142,7 +1142,7 @@ input:-webkit-autofill:active {
   }
 }
 
-.portfolio-list_item:not(:last-child) {
+.portfolio-list__item:not(:last-child) {
   margin-bottom: 30px;
 }
 
@@ -1214,7 +1214,6 @@ input:-webkit-autofill:active {
 }
 
 .portfolio-overlay-text {
-  display: block;
   position: absolute;
   top: 0;
   left: 0;
@@ -1226,6 +1225,7 @@ input:-webkit-autofill:active {
   height: 100%;
   width: 100%;
   align-items: center;
+  overflow: scroll;
 }
 
 .portfolio-list__link:hover .portfolio-overlay-text,
@@ -1239,7 +1239,7 @@ input:-webkit-autofill:active {
   line-height: 1.55;
   letter-spacing: 0.03em;
   color: var(--lite-text-color);
-  padding: 0 24px;
+  padding: 63px 24px;
 }
 
 .footer {
