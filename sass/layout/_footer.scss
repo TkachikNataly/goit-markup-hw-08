@@ -23,10 +23,8 @@
 @media screen and (min-width: 768px) {
   .footer-adaptiv {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
-    padding-left: 80px;
-    padding-right: 80px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -159,8 +157,7 @@
 }
 @media screen and (min-width: 768px) {
   .footer-subscribe {
-    padding-left: 160px;
-    padding-right: 160px;
+    width: 450px;
   }
 }
 @media screen and (min-width: 1200px) {
